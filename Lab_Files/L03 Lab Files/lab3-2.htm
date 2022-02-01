@@ -5,27 +5,32 @@
 <title>Lab 3-2</title>
 
 <script type="text/javascript">
-<!--
+//<!--
 
-/******************************************************
-Define a function that takes arguments on function call
-******************************************************/
-  
-/******************************************************
-Define a function that takes returns a value
-******************************************************/
+    
+    function showName(firstName, lastName) {
+        document.write("<strong>Your first name is: ");
+        document.write(firstName + "<br />");
+        document.write("Your last name is: ");
+        document.write(lastName + "</strong>");
+    }
 
-//-->
+    //-->
+</script>
+
+<body>
+    <script type="text/javascript">
+        showName("John", "Doe");
+
+    </script>
 </script>
 
 </head>
 
-<body>
-
 <h3>CIW JavaScript Specialist</h3>
 <hr />
 
-<!-- Add an onclick event handler to call the function -->
+<body onclick="button">
 
 <form name="myForm">
 <input type="button" value="Call Function with arguments" /><br />
