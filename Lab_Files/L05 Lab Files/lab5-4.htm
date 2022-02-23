@@ -5,7 +5,7 @@
 <title>Lab 5-4</title>
 
 <script type="text/javascript">
-<!--
+//<!--
 
 /*****************************************************************
   Add a one line if statement inside the while loop. Check myvalue 
@@ -16,10 +16,10 @@
     var loopBoolean = true;
     var myvalue = "";
     while(loopBoolean) {
-	
       myvalue = prompt("Enter data", myvalue);
 	  
-	  
+      if (myvalue == null) break;
+
 
           if (myvalue) {
             loopBoolean = false;
