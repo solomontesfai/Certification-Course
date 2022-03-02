@@ -5,9 +5,12 @@
 <title>Lab 7-3</title>
 
 <script type="text/javascript">
-<!--
+//<!--
 var str = "Mark, Pete, Emily, Adam";
-
+var myRegExp = /Pete/;
+str = str.replace(myRegExp, "Betsy");
+document.write(str.search("Emily"));
+document.write(str);
 // Your code here
 
 //-->
