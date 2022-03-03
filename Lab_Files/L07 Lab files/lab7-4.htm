@@ -9,10 +9,13 @@
 
 //create citiesArray
 //Use New York, Los Angeles, Chicago
-
-
-
-
+var citiesArray = ["New York", "Los Angeles", "Chicago"];
+var len = citiesArray;
+citiesArray.sort();
+for (i = 0; i < len;) {
+  document.write("<br>" + citiesArray[i] + "<br>");
+}
+document.write(citiesArray)
 //-->
 </script>
 </head>
@@ -20,10 +23,10 @@
 <h3>CIW JavaScript Specialist</h3>
 <hr />
 <script type="text/javascript">
-<//!--
+//!--
 
 //output citiesArray
-
+document.write(citiesArray[0])
 
 
 
