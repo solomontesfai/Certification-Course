@@ -5,11 +5,18 @@
 <title>Lab 8-3</title>
 
 <script type="text/javascript">
-<!--
+//<!--
     
 // write your code here
-
-
+function integer () {
+    var num = 1;
+    while(true)
+  yield num++;
+}
+var get = integer ();
+for (i = 0; i < 5; i++) {
+    document.write(get.next().value);
+}
 //-->
 </script>
 </head>

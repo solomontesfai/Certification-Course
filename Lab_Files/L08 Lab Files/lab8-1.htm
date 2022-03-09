@@ -1,75 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8" />
-<title>Lab 8-1: Employee Database</title>
+  <meta charset="utf-8" />
+  <title>Lab 8-1: Employee Database</title>
 
-<script type="text/javascript">
-<!--
-    
-  // Complete the employeeObject constructor
-  // Remember to add a method called showEmployee
-  function employeeObject(name,department,extension) {
+  <script type="text/javascript">
+    //<!--
 
-  
-  
-  
+    // Complete the employeeObject constructor
+    // Remember to add a method called showEmployee
+    function employeeObject(name, department, extension) {
+      this.name = name;
+      this.department = department;
+      this.extension = extension;
+      this.showEmployee = showEmployee;
+
+
+
     }
-  
-      // Instantiate 3 instances of employeeObject
-  // Important - Start your array index numbers with 1
-      var employees = new Array();
-  employees[0] = "Select Employee";
-                               ("Mai Li", "Sales", 551);
-                               ("Maria Alvarez", "Human Resources", 441);
-                               ("Tom Smith", "Marketing", 331);
-  
-  len = employees.length;
-  
+
+    // Instantiate 3 instances of employeeObject
+    // Important - Start your array index numbers with 1
+    var employees = new Array();
+    employees[0] = "Select Employee";
+    ("Mai Li", "Sales", 551);
+    ("Maria Alvarez", "Human Resources", 441);
+    ("Tom Smith", "Marketing", 331);
+    employees[1] = "Select Employee";
+    ("Lai Bi", "Prices", 151);
+    ("Mark Alvarez", "Human produce", 241);
+    ("Lom Smith", "Estate", 431);
+    employees[2] = "Select Employee";
+    ("Tai Zi", "Exports", 651);
+    ("Marlem Alvarez", "Human Likes", 741);
+    ("Dom Smith", "Stocks", 831);
+
+    len = employees.length;
+
     function showEmployee() {
       var info = "";
-  // Complete the showEmployee() function
-    
-    
-    
+      // Complete the showEmployee() function
+      info += "<!DOCTYPE html><html><head><title>" + this.department + "</title></head>";
+      info += "<body><main><div style='text-align:center'>";
+      info += "<table style='width=90%'><tr><td colspan='2' style='text-align:center'>";
+      info += "<h3>item:<strong>" + this.department + "</strong></h3><hr /></td></tr>";
+      info += "<tr><td><strong>ID:</strong> " + this.name + "</td></tr>";
+      info += "<tr><td><strong>Description:</strong> " + this.extension + "</td></tr>";
+      info += "<tr><td><strong>Price:</strong><strong style='color:#0000ff'> " + this.price + "</strong></td></tr>";
+      info += "<tr><td><img src= '" + this.name + "' height='75' width='75'/>" + "</td></tr>";
+      info += "</table><form>";
+      info += "<input type='button' value='ok' onclick='window.close();' />";
+      info += "</form></div> </main></body></html>";
+      oneWindow = open("", "OneWindow", "width=450,height=290");
+      newWindow(oneWindow);
+      oneWindowStatus = true;
+
       alert(info);
     }
 
     function showAllEmployees() {
-        var info = "";
-    for (var i = 1; i < len; i++) {
+      var info = "";
+      for (var i = 1; i < len; i++) {
         info += "Employee: " + employees[i].name + "\n";
-        info += "Department: " + employees[i].department +  "\n";
-    info += "Extension: " + employees[i].extension + "\n\n";
+        info += "Department: " + employees[i].department + "\n";
+        info += "Extension: " + employees[i].extension + "\n\n";
       }
-    
-    alert(info);
+
+      alert(info);
     }
 
 //-->
-</script>
+  </script>
 </head>
-<body>
-<h3>Employee Database</h3>
-<hr />
-<form name="empForm" id="empForm">
-<strong>Select name to view information:</strong> 
-<select name="empName" onchange="employees[this.selectedIndex].showEmployee();this.selectedIndex=0;">
-<script type="text/javascript">
-<!--
 
-  for (var i = 0; i < len; i++) {
-    if(i == 0) document.write("<option>" + employees[i]) + "</option>";
-    else document.write("<option>" + employees[i].name) + "</option>";
-  }
-  
+<body>
+  <h3>Employee Database</h3>
+  <hr />
+  <form name="empForm" id="empForm">
+    <strong>Select name to view information:</strong>
+    <select name="empName" onchange="employees[this.selectedIndex].showEmployee();this.selectedIndex=0;">
+      <script type="text/javascript">
+        //< !--
+
+        for (var i = 0; i < len; i++) {
+          if (i == 0) document.write("<option>" + employees[i]) + "</option>";
+          else document.write("<option>" + employees[i].name) + "</option>";
+        }
+
 //-->
-</script>
-</select>
-<p>
-<input type="button" value="Show All Employees" onclick=
-"showAllEmployees();" />
-</p>
-</form>
+      </script>
+    </select>
+    <p>
+      <input type="button" value="Show All Employees" onclick="showAllEmployees();" />
+    </p>
+  </form>
 </body>
+
 </html>
