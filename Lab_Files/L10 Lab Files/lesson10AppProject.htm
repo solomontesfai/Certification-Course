@@ -5,20 +5,25 @@
 <title>Lesson 10 Application Project</title>
 
 <script type="text/javascript">
-<!--
+//<!--
 
 
-    function validate(form) {
-
-
-
-
-
-
-
-
-
-    }
+  function validate(form) {
+             if((form.ccForm.value.length == 0)){
+               alert("One of your fields is blank")
+             }
+             if((form.ccForm.value.length == 4) && (form.ccForm.length == 16) ){
+               alert("Your credit card is valid as a Visa Card")
+             }
+             if((form.ccForm.value.length == 5) && (form.ccForm.length == 16) ){
+               alert("Your credit card is valid as a Master Card")
+             }
+             if((form.ccForm.value.length == 3) && (form.ccForm.length == 15) ){
+               alert("Your credit card is valid as a American Express Card")
+             }
+            
+            }
+    
 
   
 

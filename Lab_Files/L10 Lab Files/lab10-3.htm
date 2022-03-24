@@ -11,13 +11,11 @@
     var len = form.mySelect.length;
   
 // Create for loop
-for (var i = 0; i < len; i++) {
-    if (document.myForm.mySelect.options[i].selected) {
-        var myValue = document.myForm.mySelect.options[i].text;
-        alert(form)
-    }
-  } 
+for(var i = 0; i < len; i++) {
+    if(form.mySelect.options[i].selected)
+      alert("Value: " + form.mySelect.options[i].value);
   }
+  } 
 //-->
 </script>
 </head>

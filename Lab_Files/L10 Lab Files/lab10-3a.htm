@@ -5,7 +5,7 @@
 <title>Lab 10-3a</title>
 
 <script type="text/javascript">
-<!--
+//<!--
 
   function isSelected(form) {
     var len = form.mySelect.length;
@@ -26,7 +26,7 @@
 <hr />
 <form name="myForm" id="myForm">
 
-<!-- Add onchange event handler -->
+<select onchange="isSelected(); this.selectedIndex=0;">
 
 <select name="mySelect">
 <option>Select an item</option>
